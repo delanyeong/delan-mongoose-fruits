@@ -37,7 +37,7 @@ router.get("/fruits/seed", async (req, res) => {
   //* Index Route
   router.get("/", (req, res) => {
     Fruit.find({}, (err, fruits) => {
-      // log("fruits: %o", fruits);
+      log("fruits: %o", fruits);
       res.render("fruits/index.ejs", { fruits });
     });
   });
